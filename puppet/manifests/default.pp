@@ -144,3 +144,9 @@ exec { "${as_vagrant} 'gem install bundler --no-rdoc --no-ri'":
   creates => "${home}/.rvm/bin/bundle",
   require => Exec['install_ruby']
 }
+
+# --- Jekyll ---------------------------------------------------------------------
+exec { "${as_vagrant} 'gem install jekyll'":
+  creates => "${home}/.rvm/bin/jekyll",
+  require => Exec['install_ruby']
+}
