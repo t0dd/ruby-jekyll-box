@@ -1,3 +1,5 @@
+Forked from rails/rails-dev-box - works great for rails, wanted to add jekyll to the box, so I did.
+
 # A Virtual Machine for Ruby on Rails Core Development
 
 ## Introduction
