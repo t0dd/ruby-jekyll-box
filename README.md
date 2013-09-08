@@ -61,7 +61,28 @@ Vagrant mounts the directory as _/vagrant_ within the virtual machine:
 This workflow is convenient because in the host computer you normally have your editor of choice fine-tuned, Git configured, and SSH keys in place.
 
 ## How To Use The Virtual Machine with Jekyll
-    <in progress>
+
+Once you have connected into the guest box via ssh, change to the /vagrant directory to sync your project with your local machine.
+
+    vagrant@ruby-jekyll-box:~$ cd /vagrant
+
+You can create a new jekyll project with all of the required files and directories by entering:
+
+    vagrant@ruby-jekyll-box:~$ jekyll new sitename
+
+(you can replace sitename with the name of your project)
+
+Move to your jekyll directory to run it later.
+
+    vagrant@ruby-jekyll-box:~$ cd ./sitename
+
+Open the project folder on your local machine to begin editing the files.
+
+You can test your jekyll site by running 
+
+    vagrant@ruby-jekyll-box:~$ jekyll serve
+    
+then open a local browser and go to localhost:4000 to view the site.
 
 ## Virtual Machine Management
 
