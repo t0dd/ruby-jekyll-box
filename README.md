@@ -13,25 +13,6 @@ This project automates the setup of a development environment for working in Rub
 
 * [Vagrant 1.1+](http://vagrantup.com)
 
-## How To Build The Virtual Machine
-
-Building the virtual machine is this easy:
-
-    extract to project directory
-    host $ vagrant up
-
-If the base box is not present that command fetches it first. 
-The setup itself takes a few minutes. 
-After the installation has finished, you can access the virtual machine with:
-
-    host $ vagrant ssh
-    Welcome to Ubuntu 12.04 LTS (GNU/Linux 3.2.0-23-generic-pae i686)
-    ...
-    vagrant@rails-dev-box:~$
-
-Port 4000 in the host computer is forwarded to port 4000 in the virtual machine. 
-Thus, applications running in the virtual machine can be accessed via localhost:4000 in the host computer.
-
 ## What's In The Box
 
 * Git
@@ -44,22 +25,43 @@ Thus, applications running in the virtual machine can be accessed via localhost:
 
 * Jekyll
 
+## How To Build The Virtual Machine
+
+Building the virtual machine is this easy:
+
+    download & extract to project directory
+
+    or clone to local machine
+    host $ git clone https://github.com/t0dd/ruby-jekyll-box.git
+    host $ vagrant up
+
+If the base box is not present that command fetches it first. 
+The setup itself takes a few minutes. 
+After the installation has finished, you can access the virtual machine with:
+
+    host $ vagrant ssh
+    Welcome to Ubuntu 12.04 LTS (GNU/Linux 3.2.0-23-generic-pae i686)
+    ...
+    vagrant@ruby-jekyll-box:~$
+
+Port 4000 in the host computer is forwarded to port 4000 in the virtual machine. 
+Thus, applications running in the virtual machine can be accessed via localhost:4000 in the host computer.
+
+
 
 ## Recommended Workflow
 
 The recommended workflow is
 
 * edit in the host computer and
-
 * test within the virtual machine.
-
-Just clone your Rails fork in the directory of the development box in the host computer:
 
 Vagrant mounts the directory as _/vagrant_ within the virtual machine:
 
-We are ready to go to edit in the host, and test in the virtual machine.
-
 This workflow is convenient because in the host computer you normally have your editor of choice fine-tuned, Git configured, and SSH keys in place.
+
+## How To Use The Virtual Machine with Jekyll
+    <in progress>
 
 ## Virtual Machine Management
 
